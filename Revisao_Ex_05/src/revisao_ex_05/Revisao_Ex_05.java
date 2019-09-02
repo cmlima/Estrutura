@@ -1,0 +1,24 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package revisao_ex_05;
+
+/**
+ *
+ * @author lab801
+ */
+public class Revisao_Ex_05 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Trapezio trapezio = new Trapezio(4, 5, 3);
+        System.out.println(trapezio.area());
+    }
+    
+}
