@@ -63,6 +63,7 @@ public class Principal {
         System.out.println(Calculadora.posFixo("2 3 +"));
         System.out.println(Calculadora.posFixo("2 3 5 * +"));
         System.out.println(Calculadora.posFixo("2 3 5 10 / * +"));
+        System.out.println(Calculadora.posFixo("2.5 3.7 5.7 10.8 + + +"));
 
     }
     
