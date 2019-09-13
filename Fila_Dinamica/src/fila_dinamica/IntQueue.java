@@ -56,7 +56,7 @@ public class IntQueue {
             throw new Error("A fila está vazia!");
         }
         int temp = this.head.data;
-        if (this.getSize() == 1) {
+        if (this.size == 1) {
             this.head = this.tail = null;
         } else {
             this.head = this.head.next;
@@ -64,12 +64,16 @@ public class IntQueue {
         this.size--;
         return temp;
     }
+    
+    public int front() {
+        if (this.isEmpty()) {
+            throw new Error("A fila está vazia!");
+        }
+        return this.head.data;
+    }
 
     @Override
     public String toString() {
-        if (this.isEmpty()) {
-            return "Empty";
-        }
         StringBuilder builder = new StringBuilder();
         Node node = this.head;
         while (node != null) {

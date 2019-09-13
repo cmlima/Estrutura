@@ -16,43 +16,59 @@ public class Principal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        IntQueue fila = new IntQueue();
-        
-        System.out.println(fila.toString());
-        fila.enqueue(10);
-        fila.enqueue(15);
-        fila.enqueue(20);
-        fila.enqueue(25);
-        fila.enqueue(30);
-        fila.enqueue(35);
-        
-        System.out.println(fila.toString());
-        
-        System.out.println("Dequeue: " + fila.dequeue());
-        System.out.println("Dequeue: " + fila.dequeue());
-        System.out.println("Dequeue: " + fila.dequeue());
+        try {
+            IntQueue fila = new IntQueue();
 
-        System.out.println(fila.toString());
+            System.out.println(fila.toString());
+            fila.enqueue(10);
+            fila.enqueue(15);
+            fila.enqueue(20);
+            fila.enqueue(25);
+            fila.enqueue(30);
+            fila.enqueue(35);
 
-        fila.enqueue(40);
-        fila.enqueue(45);
-        fila.enqueue(50);
+            System.out.println(fila.toString());
+            System.out.println("Front: " + fila.front());
+            System.out.println("Tamanho: " + fila.getSize());
+            System.out.println("Tamanho: " + fila.getSize2());
 
-        System.out.println(fila.toString());
+            System.out.println("Dequeue: " + fila.dequeue());
+            System.out.println("Dequeue: " + fila.dequeue());
+            System.out.println("Dequeue: " + fila.dequeue());
 
+            System.out.println(fila.toString());
+            System.out.println("Front: " + fila.front());
+            System.out.println("Tamanho: " + fila.getSize());
+            System.out.println("Tamanho: " + fila.getSize2());
 
-        System.out.println("Dequeue: " + fila.dequeue());
-        System.out.println("Dequeue: " + fila.dequeue());
-        System.out.println("Dequeue: " + fila.dequeue());
+            fila.enqueue(40);
+            fila.enqueue(45);
+            fila.enqueue(50);
 
+            System.out.println(fila.toString());
+            System.out.println("Front: " + fila.front());
+            System.out.println("Tamanho: " + fila.getSize());
+            System.out.println("Tamanho: " + fila.getSize2());
 
-        System.out.println(fila.toString());
+            System.out.println("Dequeue: " + fila.dequeue());
+            System.out.println("Dequeue: " + fila.dequeue());
+            System.out.println("Dequeue: " + fila.dequeue());
 
+            System.out.println(fila.toString());
+            System.out.println("Front: " + fila.front());
 
-        System.out.println("Dequeue: " + fila.dequeue());
-        System.out.println("Dequeue: " + fila.dequeue());
-        System.out.println("Dequeue: " + fila.dequeue());
+            System.out.println("Dequeue: " + fila.dequeue());
+            System.out.println("Dequeue: " + fila.dequeue());
 
-        System.out.println(fila.toString());
+            System.out.println(fila.toString());
+            System.out.println("Front: " + fila.front());
+            System.out.println("Tamanho: " + fila.getSize());
+            System.out.println("Tamanho: " + fila.getSize2());
+
+            System.out.println("Dequeue: " + fila.dequeue());
+
+        } catch (Error e) {
+            System.out.println("Fila vazia");
+        }
     }
 }
