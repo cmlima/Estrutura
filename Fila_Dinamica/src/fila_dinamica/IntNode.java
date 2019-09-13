@@ -9,12 +9,12 @@ package fila_dinamica;
  *
  * @author lab801
  */
-public class Node {
+public class IntNode {
 
     public int data;
-    public Node next;
+    public IntNode next;
 
-    public Node(int data) {
+    public IntNode(int data) {
         this.data = data;
         this.next = null;
     }

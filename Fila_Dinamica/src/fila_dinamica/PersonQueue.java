@@ -9,12 +9,12 @@ package fila_dinamica;
  *
  * @author lab801
  */
-public class IntQueue {
+public class PersonQueue {
 
-    private IntNode head, tail;
+    private PersonNode head, tail;
     private int size;
 
-    public IntQueue() {
+    public PersonQueue() {
         size = 0;
         this.head = this.tail = null;
     }
@@ -32,7 +32,7 @@ public class IntQueue {
             return 0;
         }
         int counter = 0;
-        IntNode next = this.head;
+        PersonNode next = this.head;
         while (next != null) {
             counter++;
             next = next.next;
@@ -40,8 +40,8 @@ public class IntQueue {
         return counter;
     }
 
-    public void enqueue(int data) {
-        IntNode node = new IntNode(data);
+    public void enqueue(Person data) {
+        PersonNode node = new PersonNode(data);
         if (this.isEmpty()) {
             this.head = this.tail = node;
         } else {
@@ -51,11 +51,11 @@ public class IntQueue {
         this.size++;
     }
 
-    public int dequeue() {
+    public Person dequeue() {
         if (this.isEmpty()) {
             throw new Error("A fila está vazia!");
         }
-        int temp = this.head.data;
+        Person temp = this.head.data;
         if (this.size == 1) {
             this.head = this.tail = null;
         } else {
@@ -65,7 +65,7 @@ public class IntQueue {
         return temp;
     }
     
-    public int front() {
+    public Person front() {
         if (this.isEmpty()) {
             throw new Error("A fila está vazia!");
         }
@@ -75,9 +75,9 @@ public class IntQueue {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        IntNode node = this.head;
+        PersonNode node = this.head;
         while (node != null) {
-            builder.append(node.data).append(" ");
+            builder.append(node.data.toString()).append(" ");
             node = node.next;
         }
         return builder.toString().trim();
