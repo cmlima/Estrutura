@@ -21,6 +21,6 @@ public class CharNode {
 
     @Override
     public String toString() {
-        return this.data + "";
+        return Character.toString(this.data);
     }
 }

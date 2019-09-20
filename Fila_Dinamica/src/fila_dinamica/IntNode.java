@@ -21,6 +21,6 @@ public class IntNode {
 
     @Override
     public String toString() {
-        return this.data + "";
+        return Integer.toString(this.data);
     }
 }
